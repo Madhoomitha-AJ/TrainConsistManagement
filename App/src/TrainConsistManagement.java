@@ -1,31 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
 public class TrainConsistManagement {
     public static void main(String [] args){
-                // 🔹 Step 1: User runs program
-                System.out.println("=== Train Consist Management App ===");
 
-                // 🔹 Step 2: Initialize ArrayList
-                List<String> passengerBogies = new ArrayList<>();
 
-                // 🔹 Step 3: Add bogies (CREATE)
-                passengerBogies.add("Sleeper");
-                passengerBogies.add("AC Chair");
-                passengerBogies.add("First Class");
+                // 🔹 Step 1: Start program
+                System.out.println("=== Train Consist Management App (UC3) ===");
 
-                // 🔹 Step 4: Display bogies (READ)
-                System.out.println("Bogies after addition: " + passengerBogies);
+                // 🔹 Step 2: Create HashSet for bogie IDs
+                Set<String> bogieIds = new HashSet<>();
 
-                // 🔹 Step 5: Remove a bogie (DELETE)
-                passengerBogies.remove("AC Chair");
-                System.out.println("After removing AC Chair: " + passengerBogies);
+                // 🔹 Step 3: Add bogie IDs (including duplicates)
+                bogieIds.add("B101");
+                bogieIds.add("B102");
+                bogieIds.add("B103");
+                bogieIds.add("B101"); // duplicate
+                bogieIds.add("B102"); // duplicate
 
-                // 🔹 Step 6: Check existence (READ)
-                boolean exists = passengerBogies.contains("Sleeper");
-                System.out.println("Does Sleeper exist? " + exists);
-
-                // 🔹 Step 7: Final list state
-                System.out.println("Final bogie list: " + passengerBogies);
+                // 🔹 Step 4: Print final set
+                System.out.println("Final Bogie IDs (duplicates removed automatically):");
+                System.out.println(bogieIds);
 
                 // 🔹 Program continues
                 System.out.println("System ready for next operation...");
